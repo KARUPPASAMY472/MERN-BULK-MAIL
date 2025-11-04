@@ -36,8 +36,7 @@ function App() {
   const  send =()=>
   {
     setStatus(true)
-    axios.post("/sendemail", { msg: msg, emailList: emailList })
-
+    axios.post("https://mern-bulk-mail-api.vercel.app//sendemail",{ msg:msg,emailList:emailList })
       .then(function(data)
       {
         if (data.data === true)
